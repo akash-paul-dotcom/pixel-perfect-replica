@@ -103,10 +103,6 @@
   --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
 }
 
-@theme inline {
-  --font-sans2: none;
-}
-
 /* Frosted-glass surfaces */
 @utility glass {
   background: oklch(0.99 0.007 195 / 62%);
@@ -177,8 +173,18 @@
     border-color: var(--color-border);
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  ::selection {
+    background-color: color-mix(in oklab, var(--primary) 22%, transparent);
   }
 }
