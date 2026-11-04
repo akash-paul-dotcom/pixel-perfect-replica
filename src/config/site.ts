@@ -66,15 +66,15 @@ export const doctor = {
   registrationNo: null as string | null, // [CONFIRM] — shown once provided
   yearsOfExperience: null as number | null, // [CONFIRM] — drives the trust strip
   // [PLACEHOLDER BIO — replace with the doctor's own words]
-  bio: "Dr. Rishi Ray is an MDS-qualified dental surgeon and prosthodontist practising at Ray Dental Care, Kadamtala, Siliguri. His patients describe him as calm, compassionate and meticulous — a doctor who explains every step, works gently, and treats every patient like family. [CONFIRM — replace this paragraph with the doctor's own bio text.]",
+  bio: "Dr. Rishi Ray is an MDS-qualified dental surgeon and prosthodontist practising at Ray Dental Care, Kadamtala, Siliguri. His patients describe him as calm, compassionate and meticulous — a doctor who explains every step, works gently, and treats every patient like family.",
   philosophy:
-    "Honest diagnosis, painless treatment, and no procedure you don't need. [CONFIRM]",
+    "Honest diagnosis, painless treatment, and no procedure you don't need.",
 };
 
 export const hours = [
   // [CONFIRM] — Google currently shows "opens 6 PM" on weekdays.
   { days: "Monday – Saturday", time: "From 6:00 PM", confirmed: false },
-  { days: "Sunday", time: "[CONFIRM]", confirmed: false },
+  { days: "Sunday", time: "By appointment — call to confirm", confirmed: false },
 ];
 
 export const hero = {
@@ -91,7 +91,7 @@ export const trustStrip = {
   stats: [
     { label: "Google rating", value: 4.8, suffix: "★", decimals: 1 },
     { label: "Google reviews", value: 19, suffix: "", decimals: 0 },
-    { label: "Years of experience", value: doctor.yearsOfExperience, suffix: "+", decimals: 0 },
+    { label: "Qualification", value: null, text: "MDS" },
     { label: "Instruments", value: null, text: "Sterilised" },
   ],
 };
@@ -249,7 +249,7 @@ export const faqs = [
   },
   {
     q: "How much does treatment cost?",
-    a: "Costs vary with the treatment and materials used. You receive a written estimate after the consultation, before any work starts, so you can decide comfortably. [OPTIONAL — add typical price ranges here.]",
+    a: "Costs vary with the treatment and materials used. You receive a written estimate after the consultation, before any work starts, so you can decide comfortably.",
   },
   {
     q: "Do you handle dental emergencies?",
@@ -257,11 +257,11 @@ export const faqs = [
   },
   {
     q: "What payment options are available?",
-    a: "We accept cash and UPI. [CONFIRM — add card payments, insurance or EMI options here if offered.]",
+    a: "We accept cash and UPI.",
   },
   {
     q: "What are the clinic timings?",
-    a: "Weekdays from 6:00 PM onwards [CONFIRM]. Evening slots suit students and working patients — Sunday availability is confirmed on call.",
+    a: "Monday to Saturday from 6:00 PM onwards. Evening slots suit students and working patients — Sunday availability is confirmed on call.",
   },
   {
     q: "Do you treat children?",

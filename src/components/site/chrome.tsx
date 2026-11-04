@@ -49,7 +49,7 @@ export function SiteHeader() {
           className="inline-flex items-center gap-2 rounded-full bg-primary px-3.5 py-2 text-sm font-semibold text-primary-foreground shadow-sm transition hover:bg-primary/90 sm:px-4"
         >
           <Phone className="h-4 w-4" />
-          <span className="hidden xs:inline sm:inline">Call</span>
+          <span className="hidden sm:inline">Call</span>
         </a>
       </div>
     </header>
