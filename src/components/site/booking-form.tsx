@@ -77,7 +77,7 @@ export function BookingForm() {
     }
 
     setStatus("submitting");
-    const result = await submitLead({
+    const result = await submitLead({ data: {
       name: form.name.trim(),
       phone,
       service: form.service,
@@ -87,7 +87,7 @@ export function BookingForm() {
       consent: true,
       website: form.website || undefined,
       utm: collectUtm(),
-    });
+    } });
 
     if (!result.ok) {
       setStatus("error");

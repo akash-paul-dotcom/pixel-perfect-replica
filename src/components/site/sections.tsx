@@ -106,7 +106,7 @@ export function WhyUs() {
       />
       <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {whyChooseUs.map((item, i) => {
-          const Icon = whyIcons[i % whyIcons.length];
+          const Icon = whyIcons[i % whyIcons.length] ?? Heart;
           return (
             <div key={item.title} className="glass-soft rounded-2xl p-5">
               <span className="inline-flex rounded-full bg-accent/15 p-2.5 text-accent">
@@ -154,13 +154,13 @@ export function About() {
           </blockquote>
           <div className="mt-6 flex gap-3">
             <img
-              src={aboutImages.doctorPortrait}
+              src={aboutImages.doctorPortrait.url}
               alt="Dr. Rishi Ray at the clinic"
               className="h-20 w-20 rounded-2xl object-cover shadow-md"
               loading="lazy"
             />
             <img
-              src={aboutImages.doctorConference}
+              src={aboutImages.doctorConference.url}
               alt="Dr. Rishi Ray at a professional conference"
               className="h-20 w-20 rounded-2xl object-cover shadow-md"
               loading="lazy"
