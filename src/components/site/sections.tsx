@@ -3,6 +3,7 @@ import {
   AlignCenterHorizontal,
   Anchor,
   Baby,
+  ChevronDown,
   CircleMinus,
   Clock,
   Crown,
@@ -19,12 +20,6 @@ import {
   Zap,
   type LucideIcon,
 } from "lucide-react";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 
 import { aboutImages, clinic, faqs, hours, images, reviews, services, whyChooseUs, howItWorks, doctor } from "@/config/site";
 import { trackEvent } from "@/lib/tracking";
@@ -258,22 +253,17 @@ export function Faq() {
   return (
     <section id="faq" className="section-anchor mx-auto max-w-3xl px-4 py-16 sm:py-20">
       <SectionHeader eyebrow="Questions" title="Good to know before you visit" />
-      <Accordion type="single" collapsible className="mt-10 space-y-3">
-        {faqs.map((faq, i) => (
-          <AccordionItem
-            key={faq.q}
-            value={`faq-${i}`}
-            className="glass rounded-2xl border-none px-5"
-          >
-            <AccordionTrigger className="py-4 text-left text-sm font-semibold sm:text-base hover:no-underline">
+      <div className="mt-10 space-y-3">
+        {faqs.map((faq) => (
+          <details key={faq.q} className="glass group rounded-2xl px-5">
+            <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-4 text-sm font-semibold sm:text-base">
               {faq.q}
-            </AccordionTrigger>
-            <AccordionContent className="pb-4 text-sm leading-relaxed text-muted-foreground">
-              {faq.a}
-            </AccordionContent>
-          </AccordionItem>
+              <ChevronDown className="h-4 w-4 shrink-0 transition group-open:rotate-180" />
+            </summary>
+            <p className="pb-4 text-sm leading-relaxed text-muted-foreground">{faq.a}</p>
+          </details>
         ))}
-      </Accordion>
+      </div>
     </section>
   );
 }
